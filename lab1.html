@@ -6,8 +6,69 @@
     <title>Calculator</title>
 </head>
 <body>
-    <div class>
+    <div class="calc_container">
+        <form name="cal">
+            <marquee>SIMPLE CALCULATOR</marquee>
+            <table border="3">
+                <tr><th colspan="4"><input type="text" name="acc" value="0" readonly></th></tr>
 
+                <tr><td><input type="button" value="ON"></td>
+                <td><input type="button" value="MC" onclick="mc()"></td>
+                <td><input type="button" value="MR" onclick="mr()"></td>
+                <td><input type="button" value="OFF" onclick="off()"></td></tr>
+
+                <tr>
+                    <td><input type="button" value="1" onclick="cal.acc.value+='1'"/></td>
+
+                    <td><input type="button" value="2" onclick="cal.acc.value+='2'"/></td>
+                   
+                    <td><input type="button" value="3" onclick="cal.acc.value+='3'"/></td>
+
+                    <td><input type="button" value="+" onclick="add()"/></td>
+
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="4" onclick="cal.acc.value+='4'"/></td>
+
+                    <td><input type="button" value="5" onclick="cal.acc.value+='5'"/></td>
+                   
+                    <td><input type="button" value="6" onclick="cal.acc.value+='6'"/></td>
+
+                    <td><input type="button" value="-" onclick="diff()"/></td>
+
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="7" onclick="cal.acc.value+='7'"/></td>
+
+                    <td><input type="button" value="8" onclick="cal.acc.value+='8'"/></td>
+                   
+                    <td><input type="button" value="9" onclick="cal.acc.value+='9'"/></td>
+
+                    <td><input type="button" value="*" onclick="prod()"/></td>
+
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="0" onclick="cal.acc.value+='0'"/></td>
+
+                    <td><input type="button" value="." onclick="addDeci()"/></td>
+                   
+                    <td><input type="button" value="=" onclick="res();memory=cal.acc.value;"/></td>
+
+                    <td><input type="button" value="/" onclick="div()"/></td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="2"><input type="button" value="√" onclick="sqrt()" sgtyle="width:100%"></td>
+
+                    <td colspan="2"><input type="button" value="1/x" onclick="reciprocal()" style="width:100%"></td>
+                </tr>
+
+            </table>
+        </form>
     </div>
 </body>
 </html>
