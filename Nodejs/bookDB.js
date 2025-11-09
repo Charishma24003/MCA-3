@@ -42,3 +42,19 @@ con.connect(function (err) {
 //     console.log(res);
 // });
 
+// con.query("update books set price=price*1.15 where book_id=101", function (err) {
+//     if (err) throw err;
+//     console.log("   Record Updated Successfully!");
+// })
+
+// con.query("delete from books where book_name='1984'", function (err) {
+//     if (err) throw err;
+//     console.log("   Record Deleted Successfully!");
+// })
+
+
+
+// con.query("select *from books where author='Colleen Hoover'", function (err, res) {
+//     if (err) throw err;
+//     console.log(res);
+// });
