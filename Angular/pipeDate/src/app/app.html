@@ -1,0 +1,39 @@
+<h1>Angular Date and Pipe </h1>
+Enter a Date:<input type="date" [(ngModel)]="userDate">
+
+<pre>
+  Current Date - Short Format
+  Original:{{currentDate}}
+  Result:{{currentDate|date:'short'}}
+
+  Current Date - Medium Format
+  Result:{{currentDate|date:'medium'}}
+
+  Current Date - Long Format
+  Result:{{currentDate|date:'full'}}
+
+  Custom Date - dd/mm/yyyy
+  Date:{{customDate}}
+  Result:{{customDate|date:'dd/mm/yyyy'}}
+
+  Custom Date - mmm d y
+  Result:{{customDate|date:'mmm d y'}}
+
+  Custom Date - mmmm d y h:mm:ss a
+  Result:{{customDate|date:'mmmm d y h:mm:ss a'}}
+
+  Day of the week
+  Result:{{currentDate|date:'EEEE'}}
+
+  BirthDate - LongDate
+  Date:{{birthDate}}
+  Result:{{birthDate|date:'longDate'}}
+
+  Year Only
+  Result:{{currentDate|date:'yyyy'}}
+
+  User Input Date
+  Original:{{userDate}}
+  Result:{{userDate|date:'fullDate'}}
+
+</pre>
