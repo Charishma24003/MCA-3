@@ -1,0 +1,31 @@
+<form #userForm="ngForm">
+  <pre>
+    <h1>Hello</h1>
+    Name:<input type="text" name="uname" minlength="4" maxlength="20" ngModel #username="ngModel" required/><br>
+    <p *ngIf="username.invalid">Invalid name</p>
+    <p *ngIf="username.errors?.['required']">Name is required</p>
+    <p *ngIf="username.errors?.['minlength']">Minimum 4 characters required</p>
+    <p *ngIf="username.errors?.['maxlength']">Maximum 20 characters allowed</p>
+
+    Marks:<input type="number" name="umarks" min="0" max="100" ngModel #usermarks="ngModel" required/><br>
+    <p *ngIf="usermarks.invalid">Invalid marks</p>
+    <p *ngIf="usermarks.errors?.['required']">Marks is required</p>
+    <p *ngIf="usermarks.errors?.['min']">Minimum marks is 0</p>
+    <p *ngIf="usermarks.errors?.['max']">Maximum marks is 100</p>
+
+    Register Number:<input type="number" name="ureg" min="1" max="1000" ngModel #userreg="ngModel"  required/><br>
+    <p *ngIf="userreg.invalid">Invalid Register Number</p>
+    <p *ngIf="userreg.errors?.['required']">Register no is required</p>
+    <p *ngIf="userreg.errors?.['min']">Minimum Register no is 1</p>
+    <p *ngIf="userreg.errors?.['max']">Maximum Register no is 1000</p>
+
+    Address:<input type="text" name="uaddress" minlength="10" maxlength="20" ngModel #useraddress="ngModel" required/><br>
+    <p *ngIf="useraddress.invalid">Invalid Address</p>
+    <p *ngIf="useraddress.errors?.['required']">Address is required</p>
+    <p *ngIf="useraddress.errors?.['minlength']">Minimum 10 characters required</p>
+    <p *ngIf="useraddress.errors?.['maxlength']">Maximum 20 characters allowed</p>
+  </pre>
+
+</form>
+
+<button type="submit" [disabled]="userForm.invalid"> SUBMIT</button>
