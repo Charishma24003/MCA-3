@@ -1,8 +1,8 @@
 var prompt = require('prompt-sync')();
 
-var n1 = parseFloat(prompt("Enter the first number"));
-var n2 = parseFloat(prompt("Enter the second number"));
-var n3 = parseFloat(prompt("Enter the third number"));
+var n1 = prompt("Enter the first number");
+var n2 = prompt("Enter the second number");
+var n3 = prompt("Enter the third number");
 
 if (n1 > n2) {
     if (n1 > n3)
