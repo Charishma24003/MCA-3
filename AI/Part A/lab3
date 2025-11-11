@@ -1,0 +1,29 @@
+#part A 3rd one vaccuum cleaner
+
+def reflex_agent(location,status):
+    if status=="Dirty":
+        return "Vaccuum"
+    else:
+        if location!=locations[-1]:
+            return "Right"
+        else:
+            return "Left"
+
+locations=["A","B","C","D"]
+rooms={loc:"Dirty" for loc in locations}
+agent_location="A"
+
+for step in range(7):
+    status=rooms[agent_location]
+    action=reflex_agent(agent_location,status)
+
+    print(f"Step {step+1}:Location={agent_location},Status={status},Action={action}")
+
+    if action=="Vaccuum":
+        rooms[agent_location]="Clear"
+    elif action=="Right":
+        agent_location=locations[locations.index(agent_location)+1]
+    elif action=="Left":
+        agent_location=locations[locations.index(agent_location)-1]
+
+    print(f"New state:{rooms},Agent at {agent_location}\n")
