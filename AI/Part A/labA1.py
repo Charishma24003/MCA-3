@@ -18,7 +18,7 @@ def chatbot_response(user_input):
         return f"Nice to meet you,{user_name}!"
 
     if user_name and ("hi" in user_input or "hello" in user_input):
-        return f"Hi {username},how can I assist you today?"
+        return f"Hi {user_name},how can I assist you today?"
 
     for key in responses:
         if key in user_input:
